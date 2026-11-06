@@ -4,4 +4,47 @@
   margin: 0;
 }
 
-/* Start coding here */
+/* 1. กำหนดตัวแปร CSS Variables ทั้งหมดตามตาราง */
+:root {
+  /* Color Variables */
+  --branding-color: #ff7f50;
+  --secondary-color: cornsilk;
+  --highlight-color: #d2691e;
+  --muted-color: #a9a9a9;
+
+  /* Margin Variables */
+  --margin-level-1: 1px;
+  --margin-level-2: 5px;
+  --margin-level-3: 10px;
+  --margin-level-4: 15px;
+  --margin-level-5: 20px;
+
+  /* Padding Variables */
+  --padding-level-1: 1px;
+  --padding-level-2: 5px;
+  --padding-level-3: 10px;
+  --padding-level-4: 15px;
+  --padding-level-5: 20px;
+
+  /* Font Size Variables */
+  --font-small: 12px;
+  --font-medium: 16px;
+  --font-large: 20px;
+  --font-extra-large: 30px;
+  --font-double-extra-large: 50px;
+  --font-triple-extra-large: 100px;
+}
+
+/* 2. นำ CSS Variables มาใช้งานตาม Requirement */
+
+/* สีพื้นหลังเป็นสี Secondary และ Padding เป็น Level 5 */
+.introduction {
+  background-color: var(--secondary-color);
+  padding: var(--padding-level-5);
+}
+
+/* สีตัวอักษร h1 ที่อยู่ภายใต้ .introduction เป็นสี Branding และขนาดตัวอักษรเป็น Triple Extra Large */
+.introduction h1 {
+  color: var(--branding-color);
+  font-size: var(--font-triple-extra-large);
+}
